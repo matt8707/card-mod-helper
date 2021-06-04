@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>card-mod-helper</title>
+      <link href="include/style.css" rel="stylesheet" />
+      <script src="include/script.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <img src="include/jspath.png" id="jspath" width="260" alt="js_path">
+         <h1 onclick="paste();">card-mod-helper</h1>
+         <i>A Home Assistant tool for figuring out <a href="https://github.com/thomasloven/lovelace-card-mod">card-mod</a> element selectors for themes</i>
+         <ul>
+            <li>Open Chrome DevTools by right-clicking on a card and selecting Inspect <br> or press &#8984;&#8997;C (Mac) or Control+Shift+C (Windows, Linux)</li>
+            <li>Right-click on a DOM node in the Elements Panel and select Copy &#8594; Copy JS path</li>
+            <li>Paste in JS path and click "Convert JS path"</li>
+         </ul>
+         <a href="javascript:void(0)" onclick="sample();">Sample input...</a>
+         <input type="text" id="forminput" class="box" />
+         <button onclick="process();">Convert JS path</button>
+         <div id="card-mod-type">card-mod:</div>
+         <div id="outputroot" class="box">&nbsp;</div>
+         <button id="copy" onclick="copy();">Copy Selector</button>
+      </div>
+      <div class="section">
+         <div id="bmc"><a href="https://www.buymeacoffee.com/matt8707" target="_blank"><img src="include/bmc.png" alt="Buy Me A Coffee" width="150"></a></div>
+         <p>
+            <b>Learn more</b>
+            <br>
+            <a href="https://github.com/thomasloven/lovelace-card-mod/wiki/Card-mod-Themes/">https://github.com/thomasloven/lovelace-card-mod/wiki/Card-mod-Themes/</a>
+         </p>
+         <p>
+            <b>Questions</b>
+            <br>
+            <a href="https://community.home-assistant.io/t/card-mod-add-css-styles-to-any-lovelace-card/120744">https://community.home-assistant.io/t/card-mod-add-css-styles-to-any-lovelace-card/120744</a>
+            <br>
+            <a href="https://community.home-assistant.io/t/card-mod-super-charge-your-themes/212176">https://community.home-assistant.io/t/card-mod-super-charge-your-themes/212176</a>
+         </p>
+         <p>
+            <b>Remember to</b>
+            <br>
+            <a href="https://my.home-assistant.io/redirect/developer_call_service/?service=frontend.reload_themes">https://my.home-assistant.io/redirect/developer_call_service/?service=frontend.reload_themes</a>
+         </p>
+         <p>
+            <b>Example</b>
+            <br>
+            <a href="https://github.com/matt8707/hass-config/blob/master/include/themes.yaml">https://github.com/matt8707/hass-config/blob/master/include/themes.yaml</a>
+         </p>
+         <p>
+            <b>Contribute</b>
+            <br>
+            <a href="https://github.com/matt8707/card-mod-helper">https://github.com/matt8707/card-mod-helper</a>
+         </p>
+         <code>Aha! Click the "card-mod-helper" title to paste &#8594; convert &#8594; copy, all-in-one!</code>
+      </div>
+   </body>
+</html>
