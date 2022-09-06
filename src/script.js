@@ -14,16 +14,16 @@ const convertPath = () => {
 const getType = (input) => {
   // supported types
   let types = {
-    "card-mod-root-yaml: |": "#layout > app-header",
-    "card-mod-view-yaml: |": "#view > hui-view",
-    "card-mod-sidebar-yaml: |": "#drawer > ha-sidebar",
-    "browser-mod-popup": "body > browser-mod-popup",
+    "card-mod-root-yaml": "#layout > app-header",
+    "card-mod-view-yaml": "#view > hui-view",
+    "card-mod-sidebar-yaml": "#drawer > ha-sidebar",
+    "card-mod-more-info-yaml": "body > browser-mod-popup",
   };
 
   // return type
   for (let [type, path] of Object.entries(types)) {
     if (input.value.includes(path)) {
-      return type;
+      return `${type}: |`;
     }
   }
   // else return unknown
@@ -37,7 +37,7 @@ const replacePath = (input, output) => {
   // is js path more-info
   let js_path = input.value.includes("browser-mod-popup")
     ? input.value.replaceAll(
-        `document.querySelector("body > browser-mod-popup").shadowRoot.querySelector("ha-dialog > div.content > `,
+        `document.querySelector("body > browser-mod-popup").shadowRoot.`,
         x
       )
     : input.value
@@ -68,7 +68,7 @@ const replacePath = (input, output) => {
       `document.querySelector("body > home-assistant").shadowRoot.`
     ) ||
     input.value.includes(
-      `document.querySelector("body > browser-mod-popup").shadowRoot`
+      `document.querySelector("body > browser-mod-popup").shadowRoot.`
     )
   ) {
     output.innerHTML += `"${replace_char}"`;

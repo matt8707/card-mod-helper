@@ -7,5 +7,4 @@
 - [x] card-mod-root-yaml
 - [x] card-mod-view-yaml
 - [x] card-mod-sidebar-yaml
-- [ ] ~~card-mod-more-info-yaml~~
-- [x] browser-mod-popup
+- [x] card-mod-more-info-yaml
