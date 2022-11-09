@@ -16,7 +16,7 @@ const getType = (input) => {
   let types = {
     "card-mod-root-yaml": "#layout > app-header",
     "card-mod-view-yaml": "#view > hui-view",
-    "card-mod-sidebar-yaml": "#drawer > ha-sidebar",
+    "card-mod-sidebar-yaml": `#drawer > ha-sidebar").shadowRoot.`,
     "card-mod-more-info-yaml": "body > browser-mod-popup",
   };
 
@@ -27,7 +27,7 @@ const getType = (input) => {
     }
   }
   // else return unknown
-  return `card-mod-???`;
+  return `<span id="error">card-mod-???</span>`;
 };
 
 const replacePath = (input, output) => {
